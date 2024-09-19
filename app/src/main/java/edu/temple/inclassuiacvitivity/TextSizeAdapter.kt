@@ -19,6 +19,10 @@ class TextSizeAdapter(private val context: Context, private val numbers: Array<I
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val textView = TextView(context)
+        textView.text = numbers[position].toString()
+        textView.textSize = 22f
+        textView.setPadding(5,10,0,10)
+        return textView
 
     }
 
